@@ -1,0 +1,101 @@
+[
+  {
+    "model": "main.student",
+    "pk": 1,
+    "fields": {
+      "student_id": "001",
+      "name": "Kwon, Ohyul",
+      "department": "BSIT",
+      "age": 20,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 2,
+    "fields": {
+      "student_id": "002",
+      "name": "Kim, Ryul",
+      "department": "BSPA",
+      "age": 20,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 3,
+    "fields": {
+      "student_id": "003",
+      "name": "Jung, Woojin",
+      "department": "BTVTEd",
+      "age": 18,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 4,
+    "fields": {
+      "student_id": "004",
+      "name": "Lim, Jiho",
+      "department": "ABELS",
+      "age": 16,
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 5,
+    "fields": {
+      "student_id": "005",
+      "name": "Pham, Hanni",
+      "department": "BSSW",
+      "age": 21,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 6,
+    "fields": {
+      "student_id": "006",
+      "name": "Kim, Minji",
+      "department": "BSE",
+      "age": 22,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 7,
+    "fields": {
+      "student_id": "007",
+      "name": "Marsh, Danielle",
+      "department": "BSA",
+      "age": 21,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 8,
+    "fields": {
+      "student_id": "008",
+      "name": "Kang, Haerin",
+      "department": "BSAIS",
+      "age": 20,
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 9,
+    "fields": {
+      "student_id": "009",
+      "name": "Lee, Hyein",
+      "department": "DHRS",
+      "age": 56,
+      "gender": "18"
+    }
+  }
+]

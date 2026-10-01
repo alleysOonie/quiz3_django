@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List | Strawberry Matcha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="hero-card">
+            <div class="tiny-label">student records</div>
+            <div class="hero-content">
+                <h1>Students List</h1>
+                <p class="subtitle">⤷ ゛ list of registered students and their informations ˎˊ˗</p>
+            </div>
+            <div class="hero-decoration">♡</div>
+        </header>
+
+        <section class="info-strip">
+            <span>♡ {{ students|length }} student{{ students|length|pluralize }}</span>
+            <span class="dot">•</span>
+            <span>django database records</span>
+        </section>
+
+        <section class="student-grid">
+            {% for student in students %}
+            <article class="student-card">
+                <div class="card-top">
+                    <span class="student-number">୨୧. {{ forloop.counter|stringformat:"03d" }}</span>
+                    <span class="heart">♡</span>
+                </div>
+
+                <div class="student-name">{{ student.name }}</div>
+
+                <div class="details">
+                    <div class="detail-row">
+                        <span class="label">DEPARTMENT</span>
+                        <span class="value">{{ student.department }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">AGE</span>
+                        <span class="value">{{ student.age }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">GENDER</span>
+                        <span class="value">{{ student.gender }}</span>
+                    </div>
+                </div>
+            </article>
+            {% empty %}
+            <div class="empty-card">
+                <div class="empty-heart">♡</div>
+                <h2>No students yet</h2>
+                <p>Add student records through the Django admin at <strong>/admin/</strong>.</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <footer>
+            <span>alleysOonie</span>
+            <span>♡</span>
+            <span>2026</span>
+        </footer>
+    </main>
+</body>
+</html>

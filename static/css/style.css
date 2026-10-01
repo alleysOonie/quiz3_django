@@ -1,0 +1,283 @@
+:root {
+    --strawberry: #F9D1D9;
+    --strawberry-dark: #d98c9c;
+    --matcha: #838F58;
+    --matcha-dark: #687344;
+    --cream: #FFF9F3;
+    --ink: #4b4d36;
+    --white: #ffffff;
+    --shadow: 0 12px 30px rgba(131, 143, 88, 0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(249, 209, 217, 0.45), transparent 24%),
+        radial-gradient(circle at 90% 80%, rgba(131, 143, 88, 0.18), transparent 25%),
+        var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: radial-gradient(rgba(75, 77, 54, 0.12) 0.7px, transparent 0.7px);
+    background-size: 10px 10px;
+}
+
+.page-shell {
+    width: min(1120px, 92%);
+    margin: 36px auto 45px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-card {
+    min-height: 290px;
+    border: 1px solid rgba(131, 143, 88, 0.18);
+    border-radius: 28px;
+    background: var(--strawberry);
+    box-shadow: var(--shadow);
+    padding: 30px 38px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::after {
+    content: "✿";
+    position: absolute;
+    right: 34px;
+    bottom: -35px;
+    font-size: 160px;
+    color: rgba(255, 255, 255, 0.22);
+    transform: rotate(12deg);
+}
+
+.tiny-label {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--matcha-dark);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 720px;
+    margin: 48px auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--matcha-dark);
+}
+
+h1 {
+    margin: 0;
+    color: var(--matcha);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(48px, 8vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    margin: 20px auto 0;
+    max-width: 570px;
+    color: #687344;
+    font-size: 15px;
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 38px;
+    top: 28px;
+    color: var(--matcha);
+    font-size: 34px;
+}
+
+.info-strip {
+    width: fit-content;
+    margin: 22px auto 26px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--matcha);
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 18px rgba(131, 143, 88, 0.18);
+}
+
+.dot {
+    margin: 0 8px;
+    opacity: 0.7;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.student-card {
+    min-height: 235px;
+    background: var(--matcha);
+    color: var(--white);
+    border-radius: 22px;
+    padding: 24px 25px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-card::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(249, 209, 217, 0.18);
+    right: -45px;
+    bottom: -48px;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(131, 143, 88, 0.22);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-number {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    color: var(--strawberry);
+}
+
+.heart {
+    color: var(--strawberry);
+    font-size: 22px;
+}
+
+.student-name {
+    margin: 18px 0 17px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 1.15;
+    color: #fff7f8;
+}
+
+.details {
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    padding-top: 13px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 5px 0;
+    font-size: 11px;
+}
+
+.label {
+    opacity: 0.72;
+    letter-spacing: 0.5px;
+}
+
+.value {
+    font-weight: 600;
+    text-align: right;
+}
+
+.empty-card {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: var(--strawberry);
+    border-radius: 22px;
+    padding: 55px 20px;
+    color: var(--matcha-dark);
+}
+
+.empty-heart {
+    font-size: 45px;
+}
+
+.empty-card h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.empty-card p {
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+    color: var(--matcha-dark);
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+@media (max-width: 850px) {
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-card {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 560px) {
+    .page-shell {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .hero-card {
+        padding: 24px;
+        min-height: 235px;
+    }
+
+    .hero-content {
+        margin-top: 45px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-strip {
+        text-align: center;
+    }
+}
